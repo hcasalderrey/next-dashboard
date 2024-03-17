@@ -1,4 +1,5 @@
-import { PokemonGrid, PokemonsResponse, SimplePockemon } from "@/app/pokemons";
+import { PokemonGrid, PokemonsResponse, SimplePockemon } from "@/pokemons"
+
  
 
 
@@ -23,7 +24,7 @@ export default async function PokemonsPage() {
     const pokemons = await getPokemons(151)
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col p-2">
         <span className="text-5xl my-2">Listado de Pokémons <small>estático</small> </span>
         <PokemonGrid pokemons={pokemons}/>
     </div>

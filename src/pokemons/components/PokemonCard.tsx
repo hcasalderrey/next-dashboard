@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { SimplePockemon } from "..";
+ 
 import { IoHeartOutline } from "react-icons/io5";
+import { SimplePockemon } from "..";
 
 
 interface Props {
