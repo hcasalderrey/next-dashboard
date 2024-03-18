@@ -1,10 +1,25 @@
+import { SimpleWidget } from "@/components";
+
+
+export const metadata = {
+ title: 'Admin Dashboard',
+ description: 'Admin Dashboard page description',
+};
 
 export default function MainPage() {
   return (
-    <div className="p-2 bg-slate-100 overflow-y-scroll w-screen h-screen antialiased text-slate-900 selection:bg-blue-600 selection:text-white">
-        <div className="flex ">
-            <h1 className="text-3xl">Hello Main Page</h1>
-        </div>
+    <div className="p-2 text-black">
+         
+            <h1 className="mt-2 text-3xl">Hello Main Page</h1>
+            <span className="text-xl">Información general</span>
+
+            <div className="flex flex-wrap p-2 items-center justify-center">
+                <SimpleWidget />
+                <SimpleWidget />
+                <SimpleWidget />
+                <SimpleWidget />
+            </div>
+         
     </div> 
   );
 }
