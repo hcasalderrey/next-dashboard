@@ -37,18 +37,10 @@ const pokemonsSlice = createSlice({
   initialState,
   reducers: {
 
-    setFavoritePokemons(state, action: PayloadAction<SimplePockemon[]>) {
-
-        //state.favorites = action.payload;
-
-        const pokemons: SimplePockemon[] = action.payload;
-        //console.log(pokemons)
-        pokemons.map(pokemon => state.favorites[pokemon.id] = pokemon)
-        //pokemons.forEach( pokemon => {
-        //    state.favorites[pokemon.id] = pokemon
-        //})
-
-    },
+    setFavoritePokemons( state, action: PayloadAction<{ [key: string]: SimplePockemon }> ) {
+        state.favorites = action.payload;
+      },
+  
 
     toogleFavorite(state, action: PayloadAction<SimplePockemon>) {
         const pokemon = action.payload;
